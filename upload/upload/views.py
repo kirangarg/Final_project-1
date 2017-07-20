@@ -6,6 +6,9 @@ from datetime import datetime
 # Create your views here.
 def signup_view(request):
     #logic
-    today = datetime.now()
-    return render(request, 'signup.html', {'today': today})
+    if request.method == 'GET':
+        #display signup form
+
+        today = datetime.now()
+        return render(request, 'signup.html', {'today': today})
 
