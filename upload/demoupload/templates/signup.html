@@ -1,53 +1,52 @@
 
 <html>
-	<head>
-		<title>Signup Form</title>
-		<meta charset="utf-8">
-   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>Signup Form</title>
+	<meta charset="utf-8">
+   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!--Bootstrap-->
-		<link href="css/bootstrap.css" rel="stylesheet">
-    </head>
-	<body>
-          <div>
-			  <center>
-              <h1>Swacch Bharat</h1>
-              <h2>Sign up</h2>
-			  <h4>Date and Time: {{ today }}</h4>
+	<!--Bootstrap-->
+	<link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div>
+	<center>
+		<h1>Swacch Bharat</h1>
+        <h2>Sign up</h2>
+		<h4>Date and Time: {{ today }}</h4>
+		<form method="post">
+			{% csrf_token %}
+			<div>
+				<label for="username">Username: </label>
+				<input id="username" type="text" name="username" value="{{ username }}">
+			</div>
 
+			<div>
+				<label for="name">Name: </label>
+				<input id="name" type="text" name="name" value="{{ name }}">
+			</div>
 
-			  <form method="post">
-				  <div>
-					  <label for="username">Username: </label>
-					  <input id="username" type="text" name="username" value="">
-				  </div>
+			<div>
+				<label for="email">Email: </label>
+				<input id="email" type="text" name="email" value="{{ email }}">
+			</div>
 
-			      <div>
-					  <label for="name">Name: </label>
-                      <input id="name" type="text" name="name" value="">
-			      </div>
+			<div>
+				<label for="password">Password: </label>
+				<input id="password" type="password" name="password" value="{{ password }}">
+			</div>
+			<input type="submit" value="Sign Up">
 
-                  <div>
-                      <label for="email">Email: </label>
-                      <input id="email" type="text" name="email" value="">
-                  </div>
-
-                  <div>
-                      <label for="password">Password: </label>
-                      <input id="password" type="password" name="password" value="">
-                  </div>
-				       <input type="submit" value="Sign Up">
-
-			  </form>
-			  </center>
-		  </div>
+		</form>
+	</center>
+</div>
 
 		<!--javascript files-->
 		<!--jquery library-->
 		<script src="js/jquery-3.2.1.js"><
 		<!--Bootstrap js Library-->
 		<script src="js/bootstrap.js"></script>
-	</body>
+</body>
 </html>
 
